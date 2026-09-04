@@ -67,6 +67,90 @@ It can be used for activities such as:
 
 ---
 
+### ⚙️ Lab Configuration
+
+| 🧩 Component | ⚙️ Configuration |
+| :--- | :--- |
+| 🖥️ **Host OS** | Windows 10 |
+| 🧠 **Host RAM** | 8 GB |
+| ⚡ **Processor** | Intel Core i7 |
+| 🧰 **Hypervisor** | VMware Workstation / Player |
+| 🐲 **Security OS** | Kali Linux |
+| 🧠 **Kali RAM** | 2048 MB |
+| 🎯 **Target OS** | Metasploitable 2 |
+| 🧠 **Target RAM** | 512 MB |
+| 🌐 **Virtual Network** | NAT / Host-Only Network |
+| 📡 **Network Address** | 192.168.1.0/24 |
+| 🐧 **Kali IP Address** | 192.168.1.10/24 |
+| 🎯 **Metasploitable IP** | 192.168.1.20/24 |
+| 🚪 **Default Gateway** | 192.168.1.1 |
+| 🌍 **DNS Server** | 8.8.8.8 |
+| 🔮 **Future VM Range** | 192.168.1.30–192.168.1.99 |
+
+---
+
+## 🔍 Lab Verification
+
+| ✅ Test | 📄 Command | 🎯 Expected Result |
+| :--- | :--- | :--- |
+| 🌐 **Check IP address** | `ip a` | Correct Kali IP displayed |
+| 📡 **Test gateway** | `ping 192.168.1.1` | Successful replies |
+| 🌍 **Test Internet connectivity** | `ping 8.8.8.8` | Successful replies |
+| 🔍 **Test DNS resolution** | `nslookup google.com` | Domain resolves |
+| 🎯 **Target Connectivity** | `ping <Metasploitable_IP>` | Successful replies |
+| 🧰 **Verify Nmap** | `nmap --version` | Nmap version displayed |
+| 🔄 **Verify snapshot** | Restore snapshot and run `ip a` | Baseline configuration restored |
+
+### Example Results
+
+```text
+IP Address:
+192.168.1.10/24
+
+Gateway:
+192.168.1.1
+
+DNS:
+8.8.8.8
+
+Metasploitable IP:
+192.168.1.20
+
+---
+
+## 🐞 Problems Encountered & Solutions
+
+Documenting real troubleshooting steps encountered during the laboratory setup process.
+
+---
+
+### Problem 1. Kali Linux Display Resolution Stuck in VMware
+
+**Symptom:** After installing Kali Linux in VMware Workstation / Player, the desktop remained stuck in a low resolution (e.g., 800x600) and would not scale automatically when maximizing the window.
+
+**Solution:**
+The issue was resolved by reinstalling the open-source VMware guest integration tools and restarting the desktop manager:
+
+```bash
+sudo apt update
+sudo apt install -y open-vm-tools open-vm-tools-desktop
+sudo reboot
+
+
+### Problem 2. Network Isolation Between Kali and Metasploitable
+
+**Symptom:** Kali Linux was unable to `ping` or scan the Metasploitable 2 VM, even though both virtual machines were turned on and running on the host system.
+
+**Solution:**
+Both VMs were assigned to different virtual network adapters in VMware. 
+
+1. Opened **VMware Settings** for both **Kali Linux** and **Metasploitable**.
+2. Changed the Network Adapter setting for both machines to **NAT (VMnet8)** so they reside on the same subnet.
+3. Restarted the network interface on Kali Linux:
+   ```bash
+   sudo systemctl restart NetworkManager
+
+
 ## 📁 Repository Structure
 
 ```text
