@@ -1,0 +1,12 @@
+# VMware files
+*.lck
+*.vmem
+*.vmss
+*.vmsn
+*.vmxf
+*.nvram
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
