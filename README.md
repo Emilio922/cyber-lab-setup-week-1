@@ -150,6 +150,8 @@ Both VMs were assigned to different virtual network adapters in VMware.
    ```bash
    sudo systemctl restart NetworkManager
 
+---
+
 
 ## 📁 Repository Structure
 
