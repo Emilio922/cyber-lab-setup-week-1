@@ -131,7 +131,7 @@ Example VM configuration:
 
 The VM was started successfully.
 
-![Kali Linux Running](images/kali-linux-running.png)
+![Kali Linux VMware Details](images/kali-vmware-details.png)
 
 ---
 
