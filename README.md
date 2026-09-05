@@ -81,6 +81,164 @@ It can be used for activities such as:
 
 ---
 
+
+## 🛠️ Lab Setup Procedure
+
+---
+
+### Step 1. Install VMware Workstation
+
+VMware Workstation was installed as the virtualization platform for creating and managing the cybersecurity lab environment.
+
+**Software:**
+- VMware Workstation
+
+VMware allows multiple virtual machines to run in an isolated environment while sharing networking resources.
+
+---
+
+### Step 2. Download Kali Linux
+
+The Kali Linux virtual machine was downloaded from the official Kali Linux website.
+
+**Source:**
+- https://www.kali.org/
+
+Kali Linux will be used as the security-testing machine in the lab.
+
+---
+
+### Step 3. Download Metasploitable
+
+Metasploitable was downloaded as the intentionally vulnerable target machine.
+
+Metasploitable provides services and vulnerabilities that can be safely used for learning and authorized security testing.
+
+---
+
+### Step 4. Import Kali Linux into VMware
+
+The Kali Linux virtual machine was imported into VMware Workstation.
+
+Example VM configuration:
+
+| Setting | Value |
+|----------|---------|
+| RAM | 2 GB |
+| CPU | 2 Processors |
+| Network Adapter | NAT or Host-Only |
+| Disk | Default Kali Disk |
+
+The VM was started successfully.
+
+![Kali Linux Running](images/kali-linux-running.png)
+
+---
+
+### Step 5. Import Metasploitable
+
+The Metasploitable virtual machine was imported into VMware.
+
+Example configuration:
+
+| Setting | Value |
+|----------|---------|
+| RAM | 512 MB – 1 GB |
+| CPU | 1 Processor |
+| Network Adapter | Same network as Kali |
+
+Both virtual machines were connected to the same virtual network to allow communication.
+
+---
+
+### Step 6. Configure VMware Network
+
+A private virtual network was configured in VMware.
+
+Example network setup:
+
+| Component | Example |
+|------------|------------|
+| Network Type | NAT |
+| Kali Linux | Dynamic IP |
+| Metasploitable | Dynamic IP |
+
+This configuration allows communication between Kali Linux and Metasploitable while keeping the lab isolated.
+
+---
+
+### Step 7. Verify Kali Linux Network
+
+Open Terminal and run:
+
+```bash
+ip a
+```
+
+Expected result:
+
+```text
+IP Address:
+192.168.x.x
+```
+
+---
+
+### Step 8. Verify Connectivity
+
+Test communication between virtual machines:
+
+```bash
+ping <Metasploitable-IP>
+```
+
+Expected result:
+
+```text
+64 bytes from <IP>: icmp_seq=1 ttl=64 time=0.xxx ms
+```
+
+---
+
+### Step 9. Verify Nmap
+
+Check that Nmap is installed:
+
+```bash
+nmap --version
+```
+
+Expected result:
+
+```text
+Nmap version displayed successfully
+```
+
+---
+
+### Step 10. Create VMware Snapshot
+
+A clean VMware snapshot was created after completing the installation.
+
+This allows quick recovery to a known good state before future exercises.
+
+---
+
+## ✅ Week 1 Completed
+
+- [x] VMware installed
+- [x] Kali Linux installed
+- [x] Metasploitable installed
+- [x] Screenshot documentation added
+- [x] GitHub repository created
+- [ ] Network configuration documented
+- [ ] Connectivity verified
+- [ ] Snapshot created
+
+
+
+
+
 ## 🔍 Lab Verification
 
 | ✅ Test | 📄 Command | 🎯 Expected Result |
