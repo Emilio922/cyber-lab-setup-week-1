@@ -10,6 +10,13 @@ The lab is designed to use isolated virtual machines so that Kali Linux can be u
 
 ---
 
+## 📌 Project Information
+
+**Program Name:** Cybersecurity at Networkwalks | **Week:** 01 | **Project:** Cybersecurity & Pentesting Lab Setup (VMware) | **Repository:** GitHub
+
+---
+
+
 ## 🎯 Objectives
 
 The main objectives of this project are to:
@@ -305,42 +312,109 @@ Both VMs were assigned to different virtual network adapters in VMware.
 ---
 
 
+## 💡 What I Learned
+
+Through this project, I learned how to create and configure a virtual environment for cybersecurity practice using VMware Workstation.
+
+The most important concepts I learned include:
+
+### 1. VMware Networking Modes
+
+A standard Host-Only configuration and a NAT Network (VMnet8) serve different purposes.
+
+A VMware NAT Network allows multiple VMs connected to the same subnet to communicate with one another while providing network address translation for external internet connectivity.
+
+This makes it useful for building a multi-machine cybersecurity laboratory.
+
+---
+
+### 2. Virtual Machine Networking
+
+I learned how VMware virtual network adapters connect virtual machines to different types of networks and how network configuration affects communication between machines.
+
+---
+
+### 3. Static IP Configuration
+
+I learned how to configure and verify IPv4 addressing, subnet masks, gateways, and DNS settings in Kali Linux.
+
+---
+
+### 4. VM Snapshots
+
+I learned that a clean snapshot should be created **before performing risky or experimental activities**.
+
+This provides a known-good recovery point for future cybersecurity exercises.
+
+---
+
+### 5. Documentation
+
+I learned that documenting commands, configuration, screenshots, problems, and solutions is an important part of a professional cybersecurity project.
+
+
+---
+
+## ⚠️ Security & Ethical Use Disclaimer
+
+This laboratory environment was built strictly for educational, research, and authorized security testing purposes. 
+
+* **Authorized Scope:** All activities, scans, and security testing must strictly target virtual machines within this isolated local lab network (e.g., `Kali Linux` and `Metasploitable 2`).
+* **Prohibited Actions:** Using tools, scripts, or techniques demonstrated in this project against unauthorized third-party systems, networks, or devices without explicit written permission is strictly prohibited and illegal.
+* **Liability:** The author assumes no responsibility or liability for any misuse, damage, or legal consequences caused by the information or tools contained in this repository.
+
+---
+
+## 🔗 Tools & Resources
+
+The following tools, software, and documentation were utilized to build and verify this cybersecurity laboratory environment:
+
+* **[VMware Workstation](https://www.vmware.com/products/workstation-pro.html):** Type-2 hypervisor used for virtualizing the lab infrastructure.
+* **[Kali Linux](https://www.kali.org/):** Pre-configured Debian-derived Linux distribution designed for penetration testing and digital forensics.
+* **[Metasploitable 2](https://sourceforge.net/projects/metasploitable/):** Intentionally vulnerable Linux virtual machine used as a target for security testing.
+* **[7-Zip](https://www.7-zip.org/):** Open-source file archiver used for extracting compressed VM image archives.
+* **[Nmap](https://nmap.org/):** Open-source network scanner used for host discovery and service detection.
+
+---
+
 ## 📁 Repository Structure
 
 ```text
 cyber-lab-setup-week-1/
-├── README.md
-├── images/
-│   └── kali-linux-running.png
-└── screenshots/
+│
+├── .gitignore                  # Excludes temporary VMware system files
+├── README.md                   # Main documentation and lab report
+│
+└── images/                     # Project screenshots
+    ├── import-kali-linux.png   # VMware Kali Linux import configuration
+    └── kali-linux-running.png  # Kali Linux virtual machine running
 ```
 
 ---
 
-## 🚀 Next Steps
+## 👤 Author
 
-Future weeks can build on this environment by documenting:
+**Salim Akiki**  
+Cybersecurity Student
 
-1. VMware network configuration
-2. Kali Linux IP configuration
-3. Metasploitable IP configuration
-4. Connectivity testing
-5. Nmap reconnaissance
-6. Service and port enumeration
-7. Vulnerability identification
-8. Controlled exploitation exercises
-9. Findings and remediation notes
+**LinkedIn:** [https://www.linkedin.com/in/salim-akiki-82911a22a](https://www.linkedin.com/in/salim-akiki-82911a22a?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 
 ---
 
-## 📚 Week 1 Status
+## 🚀 Week 1 Status & Next Steps
 
-**Status:** ✅ Initial lab setup documented
+### 📊 Week 1 Status
+- [x] VMware Workstation environment installed and configured.
+- [x] Kali Linux attacker virtual machine imported and network-bound.
+- [x] Metasploitable 2 target virtual machine deployed.
+- [x] VMnet8 (NAT) subnets and network connectivity verified between VMs.
+- [x] Baseline clean snapshots created for recovery points.
+- [x] Repository structure and initial lab documentation completed.
 
-**Completed:**
-- [x] Kali Linux downloaded
-- [x] Kali Linux running in VMware
-- [x] Metasploitable downloaded
-- [x] Initial lab repository documentation created
-- [ ] Virtual network configuration documented
-- [ ] Kali ↔ Metasploitable connectivity documented
+---
+
+### 🔮 Next Steps (Week 2 Preview)
+- [ ] Conduct basic network discovery and host enumeration using `Nmap`.
+- [ ] Identify open ports and active services on the Metasploitable 2 target.
+- [ ] Document preliminary scanning outputs and initial vulnerability findings.
+- [ ] Perform basic vulnerability assessments against identified services.
