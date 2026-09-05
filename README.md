@@ -118,6 +118,7 @@ Metasploitable IP:
 ```
 ---
 
+
 ## 🐞 Problems Encountered & Solutions
 
 Documenting real troubleshooting steps encountered during the laboratory setup process.
@@ -135,6 +136,7 @@ The issue was resolved by reinstalling the open-source VMware guest integration 
 sudo apt update
 sudo apt install -y open-vm-tools open-vm-tools-desktop
 sudo reboot
+```
 
 
 ### Problem 2. Network Isolation Between Kali and Metasploitable
