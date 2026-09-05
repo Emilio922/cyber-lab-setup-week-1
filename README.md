@@ -231,19 +231,21 @@ This allows quick recovery to a known good state before future exercises.
 
 ---
 
-## ✅ Week 1 Completed
 
-- [x] VMware installed
-- [x] Kali Linux installed
-- [x] Metasploitable installed
-- [x] Screenshot documentation added
-- [x] GitHub repository created
-- [ ] Network configuration documented
-- [ ] Connectivity verified
-- [ ] Snapshot created
+## 📁 Repository Structure
 
+```text
+cyber-lab-setup-week-1/
+│
+├── .gitignore                  # Excludes temporary VMware system files
+├── README.md                   # Main documentation and lab report
+│
+└── images/                     # Project screenshots
+    ├── import-kali-linux.png   # VMware Kali Linux import configuration
+    └── kali-linux-running.png  # Kali Linux virtual machine running
+```
 
-
+---
 
 
 ## 🔍 Lab Verification
@@ -311,6 +313,25 @@ Both VMs were assigned to different virtual network adapters in VMware.
 
 ---
 
+## 🚀 Week 1 Status & Next Steps
+
+### 📊 Week 1 Status
+- [x] VMware Workstation environment installed and configured.
+- [x] Kali Linux attacker virtual machine imported and network-bound.
+- [x] Metasploitable 2 target virtual machine deployed.
+- [x] VMnet8 (NAT) subnets and network connectivity verified between VMs.
+- [x] Baseline clean snapshots created for recovery points.
+- [x] Repository structure and initial lab documentation completed.
+
+---
+
+### 🔮 Next Steps (Week 2 Preview)
+- [ ] Conduct basic network discovery and host enumeration using `Nmap`.
+- [ ] Identify open ports and active services on the Metasploitable 2 target.
+- [ ] Document preliminary scanning outputs and initial vulnerability findings.
+- [ ] Perform basic vulnerability assessments against identified services.
+
+---
 
 ## 💡 What I Learned
 
@@ -377,20 +398,6 @@ The following tools, software, and documentation were utilized to build and veri
 
 ---
 
-## 📁 Repository Structure
-
-```text
-cyber-lab-setup-week-1/
-│
-├── .gitignore                  # Excludes temporary VMware system files
-├── README.md                   # Main documentation and lab report
-│
-└── images/                     # Project screenshots
-    ├── import-kali-linux.png   # VMware Kali Linux import configuration
-    └── kali-linux-running.png  # Kali Linux virtual machine running
-```
-
----
 
 ## 👤 Author
 
@@ -400,21 +407,3 @@ Cybersecurity Student
 **LinkedIn:** [https://www.linkedin.com/in/salim-akiki-82911a22a](https://www.linkedin.com/in/salim-akiki-82911a22a?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 
 ---
-
-## 🚀 Week 1 Status & Next Steps
-
-### 📊 Week 1 Status
-- [x] VMware Workstation environment installed and configured.
-- [x] Kali Linux attacker virtual machine imported and network-bound.
-- [x] Metasploitable 2 target virtual machine deployed.
-- [x] VMnet8 (NAT) subnets and network connectivity verified between VMs.
-- [x] Baseline clean snapshots created for recovery points.
-- [x] Repository structure and initial lab documentation completed.
-
----
-
-### 🔮 Next Steps (Week 2 Preview)
-- [ ] Conduct basic network discovery and host enumeration using `Nmap`.
-- [ ] Identify open ports and active services on the Metasploitable 2 target.
-- [ ] Document preliminary scanning outputs and initial vulnerability findings.
-- [ ] Perform basic vulnerability assessments against identified services.
