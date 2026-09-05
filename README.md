@@ -72,20 +72,12 @@ It can be used for activities such as:
 | 🧩 Component | ⚙️ Configuration |
 | :--- | :--- |
 | 🖥️ **Host OS** | Windows 10 |
-| 🧠 **Host RAM** | 8 GB |
-| ⚡ **Processor** | Intel Core i7 |
-| 🧰 **Hypervisor** | VMware Workstation / Player |
-| 🐲 **Security OS** | Kali Linux |
-| 🧠 **Kali RAM** | 2048 MB |
+| 🧰 **Hypervisor** | VMware Workstation |
+| 🐲 **Attacker OS** | Kali Linux |
 | 🎯 **Target OS** | Metasploitable 2 |
-| 🧠 **Target RAM** | 512 MB |
-| 🌐 **Virtual Network** | NAT / Host-Only Network |
-| 📡 **Network Address** | 192.168.1.0/24 |
-| 🐧 **Kali IP Address** | 192.168.1.10/24 |
-| 🎯 **Metasploitable IP** | 192.168.1.20/24 |
-| 🚪 **Default Gateway** | 192.168.1.1 |
-| 🌍 **DNS Server** | 8.8.8.8 |
-| 🔮 **Future VM Range** | 192.168.1.30–192.168.1.99 |
+| 🌐 **Network Type** | NAT Network |
+| 🐧 **Kali IP** | 192.168.1.10 |
+| 🎯 **Metasploitable IP** | 192.168.1.20 |
 
 ---
 
