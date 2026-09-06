@@ -5,6 +5,8 @@
 *.vmsn
 *.vmxf
 *.nvram
+*.vmdk
+*.log
 
 # OS/editor files
 .DS_Store
