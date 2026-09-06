@@ -131,10 +131,10 @@ Example VM configuration:
 
 | Setting | Value |
 |----------|---------|
-| RAM | 2 GB |
-| CPU | 2 Processors |
-| Network Adapter | NAT or Host-Only |
-| Disk | Default Kali Disk |
+| RAM | 7.5 GB |
+| CPU | 4 Processors |
+| Network Adapter | NAT |
+| Disk | 80.1 GB (Default Kali Disk) |
 
 The VM was started successfully.
 
