@@ -140,39 +140,10 @@ ls -lh *.txt
 ![Kali Linux running](images/file-verification.png)
 
 
+
+
 ---
 
-
-## 📂 Repository Structure
-
-```text
-.
-├── images/                      # Week 1 project screenshots
-│   ├── import-kali-linux.png    # VMware Kali Linux import configuration
-│   └── kali-linux-running.png   # Kali Linux virtual machine running
-├── week-2/                      # Week 2 lab directory
-│   ├── images/                  # Week 2 project screenshots
-│   │   ├── .gitkeep             # Directory tracking file
-│   │   ├── curl-output.png      # cURL execution screenshot
-│   │   ├── dnsrecon-output.png  # DNSRecon output screenshot
-│   │   ├── file-verification.png# Terminal log file verification screenshot
-│   │   ├── nslookup-output.png  # NSLookup query screenshot
-│   │   ├── wafw00f-output.png   # WAF detection screenshot
-│   │   ├── whatweb-output.png   # WhatWeb technology scan screenshot
-│   │   └── whois-output.png     # WHOIS query screenshot
-│   ├── .gitkeep                 # Directory tracking file
-│   ├── curl-output.txt          # HTTP headers scan log
-│   ├── dnsrecon-output.txt      # DNS enumeration log
-│   ├── nslookup-output.txt      # Domain IP resolution log
-│   ├── wafw00f-output.txt       # WAF detection scan log
-│   ├── whatweb-output.txt       # Web technology fingerprint log
-│   ├── whois-output.txt         # Domain registration log
-│   └── README.md                # Week 2 lab documentation
-├── .gitignore                    # Excludes temporary VMware system files
-└── README.md                    # Main repository README file
-```
-
----
 
 ## 🔍 W2-PM2 — GHDB & Search-Engine OSINT
 
@@ -373,6 +344,41 @@ This practical application underscored the necessity of maintaining precise orga
 
 ---
 
+## 📂 Repository Structure
+
+```text
+.
+├── images/                        # Week 1 project screenshots
+│   ├── import-kali-linux.png      # VMware Kali Linux import configuration
+│   └── kali-linux-running.png     # Kali Linux virtual machine running
+├── week-2/                        # Week 2 lab directory
+│   ├── images/                    # Week 2 project screenshots
+│   │   ├── .gitkeep               # Directory tracking file
+│   │   ├── curl-output.png        # cURL execution screenshot
+│   │   ├── dnsrecon-output.png    # DNSRecon output screenshot
+│   │   ├── file-verification.png  # Terminal log file verification screenshot
+│   │   ├── network_topology.pdf   # Zenmap network topology export
+│   │   ├── nslookup-output.png    # NSLookup query screenshot
+│   │   ├── theharvester-baidu.png # theHarvester execution screenshot
+│   │   ├── wafw00f-output.png     # WAF detection screenshot
+│   │   ├── whatweb-output.png     # WhatWeb technology scan screenshot
+│   │   └── whois-output.png       # WHOIS query screenshot
+│   ├── .gitkeep                   # Directory tracking file
+│   ├── curl-output.txt            # HTTP headers scan log
+│   ├── dnsrecon-output.txt        # DNS enumeration log
+│   ├── nslookup-output.txt        # Domain IP resolution log
+│   ├── wafw00f-output.txt         # WAF detection scan log
+│   ├── whatweb-output.txt         # Web technology fingerprint log
+│   ├── whois-output.txt           # Domain registration log
+│   └── README.md                  # Week 2 lab documentation
+├── .gitignore                     # Excludes temporary VMware system files
+└── README.md                      # Main repository README file
+```
+
+
+---
+
+
 ## ⚠️ Challenges Encountered
 
 Conducting search-engine OSINT reconnaissance presented several practical challenges, primarily related to the dynamic nature of the internet and web indexing. Filtering out invalid or offline endpoints proved to be the most time-consuming aspect of the research due to the following factors:
@@ -423,7 +429,7 @@ Any raw, unredacted data is stored securely offline and will not be shared publi
 
 The following tools, software, and resources were utilized to conduct the reconnaissance and network discovery exercises for this module:
 
-* **[Nmap](https://nmap.org/)**: Open-source network scanner used for host discovery and subnet identification[cite: 14].
+* **[Nmap](https://nmap.org/)**: Open-source network scanner used for host discovery and subnet identification.
 * **[Zenmap](https://nmap.org/zenmap/)**: Official graphical user interface (GUI) for Nmap, used for executing ping scans and generating visual network topology maps.
 * **[theHarvester](https://github.com/laramies/theHarvester)**: Open-source OSINT tool utilized for gathering domain intelligence, subdomains, and hostnames from public sources.
 * **[Maltego](https://www.maltego.com/)**: Graphical link analysis software used for mapping open-source intelligence relationships and data points.
